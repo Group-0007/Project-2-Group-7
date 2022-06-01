@@ -127,3 +127,5 @@ This project is covered by MIT license ![License: MIT](https://img.shields.io/ba
 ## Deployed URL:
 
 This application is deployed on Heroku:
+
+[Heroku](https://residential-matchmaker.herokuapp.com/)
