@@ -4,7 +4,7 @@
     <form class="edit-post-form">
         <div>
             <input name="post-title" type="text" value="{{post.title}}" /><br>
-            <textarea name="post-content" rows="15" cols="100">{{post.content}}</textarea>
+            <input name="post-content" type="text" rows="15" cols="100" value="{{post.content}}" /><br>
         </div>
         <div>
             <p class="soft-text">This was posted by you on {{format_date post.created_at}}</p>
