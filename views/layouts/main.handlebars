@@ -25,7 +25,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         {{#if loggedIn}}
-                        <li class="nav-item"><a class="nav-link" href="/dashboard">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                        <button id="logout" class="btn-no-style">logout</button>
                         {{else}}
                         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                         {{/if}}
