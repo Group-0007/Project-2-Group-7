@@ -16,16 +16,18 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Residential Matchmaker</a>
+                <a class="navbar-brand" href="/">Residential Matchmaker</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
-                
+                <br><br>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         {{#if loggedIn}}
-                        <li class="nav-item"><a class="nav-link" href="/dashboard">Logout</a></li>
+                         <li class="soft-text">Hello,{{username}}</li>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                        <button id="logout" class="btn-no-style">logout</button>
                         {{else}}
                         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                         {{/if}}
@@ -51,7 +53,7 @@
                         </p>
                     </div>
                 </div>
-                <img class="img-fluid" src="assets/img/laptop3.jpg" alt="..." />
+                <img class="img-fluid" src="Project-2-Group-7\public\assets\laptop3.jpg" alt="..." />
             </div>
         </section>
         <!-- Contact-->
