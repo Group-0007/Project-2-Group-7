@@ -11,7 +11,4 @@ router.use((req, res) => {
     res.status(404).end();
 });
 
-app.use("/assets", express.static(path.join(__dirname, "/public/assets")));
-app.use("/stylesheet", express.static(path.join(__dirname, "/public/stylesheet")));
-
 module.exports = router;
