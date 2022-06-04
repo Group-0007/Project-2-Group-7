@@ -65,23 +65,23 @@ const commentdata = [
     comment_text:
       'Grew up down the street from here, lots of memories',
     user_id: 3,
-    post_id: 13
+    post_id: 1
   },
   {
     comment_text:
       'This is my house!  You want to buy it!',
     user_id: 4,
-    post_id: 14
+    post_id: 2
   },
   {
     comment_text: 'I will be able to afford something like this one day.',
     user_id: 5,
-    post_id: 15
+    post_id: 3
   },
   {
     comment_text: 'Grass looks great, I want your gardners number.',
     user_id: 8,
-    post_id: 1
+    post_id: 4
   },
   {
     comment_text:
@@ -151,17 +151,17 @@ const commentdata = [
   {
     comment_text: 'Cute house, might buy later.',
     user_id: 5,
-    post_id: 13
+    post_id: 7
   },
   {
     comment_text: 'Go looking for oil change videos and I end up buying a house.  Wild world.',
     user_id: 10,
-    post_id: 14
+    post_id: 5
   },
   {
     comment_text: 'Residential Matchmaker is the best.',
     user_id: 10,
-    post_id: 15
+    post_id: 8
   },
   {
     comment_text: 'I once saw a chupacabra in these parts.',
