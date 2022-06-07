@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS housing_db;
+
+CREATE DATABASE housing_db;
