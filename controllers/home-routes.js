@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     console.log(req.session);
     console.log(req.session.username);
     Post.findAll({
-        attributes: ['id', 'title', 'content', 'created_at'],
+        // attributes: ['id', 'title', 'content', 'created_at'],
         include: [
             {
                 model: User,
@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
     })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({plain: true}));
+            console.log(posts)
             res.render('homepage', {
                 posts,
                 loggedIn: req.session.loggedIn,
@@ -93,6 +94,13 @@ router.get('/post/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
+});
+
+router.get('/about', (req, res) => {
+    res.render('aboutus', {
+        loggedIn: req.session.loggedIn,
+        username: req.session.username
+    });
 });
 
 module.exports = router;

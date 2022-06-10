@@ -1,17 +1,22 @@
 <header class="masthead">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Residential Matchmaker</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Discover residential properties in your area and connect with owners!</h2>
-                <a class="btn btn-primary" href="/signup">Sign Up</a>
-            </div>
-        </div>
+  <div
+    class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center"
+  >
+    <div class="d-flex justify-content-center">
+      <div class="text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Residential Matchmaker</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Discover residential
+          properties in your area and connect with owners!</h2>
+        {{#if loggedIn}}{{else}}
+          <a class="btn btn-primary" href="/signup">Sign Up</a>
+        {{/if}}
+      </div>
     </div>
+  </div>
 </header>
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
+{{! <ol class="post-list"> }}
+{{#each posts as |post|}}
+  {{!-- <li>
     <article class="post">
       <div class="title">
         <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
@@ -24,6 +29,25 @@
         <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
       </div>
     </article>
-  </li>
-  {{/each}}
-</ol>
+  </li> --}}
+
+  <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+    <div class="col-lg-6"><img
+        class="img-fluid"
+        src="/assets/house4.jpg"
+        alt="..."
+      /></div>
+    <div class="col-lg-6">
+      <div class="bg-black text-center h-100 project">
+        <div class="d-flex h-100">
+          <div class="project-text w-100 my-auto text-center text-lg-left">
+             <a href="{{post.post_url}}" target="_blank"></a><h4 class="text-white">{{post.title}}</h4></a>
+            <p class="mb-0 text-white-50">{{post.content}}</p>
+            <hr class="d-none d-lg-block mb-0 ms-0" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+{{! </ol> }}

@@ -25,13 +25,13 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         {{#if loggedIn}}
-                         <li class="soft-text">Hello,{{username}}</li>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard">Hello, {{username}}</a></li>
                         <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-                        <button id="logout" class="btn-no-style">logout</button>
+                        <li class="nav-item"><a class="nav-link" href="#" id="logout">Logout</a></li>
                         {{else}}
                         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                         {{/if}}
-                        <li class="nav-item"><a class="nav-link" href="/aboutus">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="/aboutus">Contact</a></li>
                     </ul>
                 </div>
@@ -40,7 +40,7 @@
         <main>
         {{{ body }}}
         </main>
-        <!-- Contact-->
+        <!-- Social-->
         <section class="contact-section bg-black" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="social d-flex justify-content-center">
