@@ -9,6 +9,9 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
 var morgan = require('morgan')
+const fetch = require('node-fetch');
+
+const url = 'https://realty-in-ca1.p.rapidapi.com/locations/auto-complete?Area=Quebec&CultureId=1';
 
 //cookie timeout is 1 hour
 const sess = {
@@ -36,6 +39,19 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(routes);
+
+const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'realty-in-ca1.p.rapidapi.com',
+      'X-RapidAPI-Key': '6f5f17331cmshc434ece2ea4ac7ap1b6b51jsn2db748cde5ea'
+    }
+  };
+  
+  fetch(url, options)
+      .then(res => res.json())
+      .then(json => console.log(json))
+      .catch(err => console.error('error:' + err));
 
 //Connection to server and database
 sequelize.sync({force: false}).then(() => {
