@@ -11,7 +11,7 @@ require('dotenv').config();
 var morgan = require('morgan')
 const fetch = require('node-fetch');
 
-const url = 'https://realty-in-ca1.p.rapidapi.com/locations/auto-complete?Area=Quebec&CultureId=1';
+const url = 'https://realty-in-ca1.p.rapidapi.com/locations/auto-complete?Area=Ontario&CultureId=1';
 
 //cookie timeout is 1 hour
 const sess = {
