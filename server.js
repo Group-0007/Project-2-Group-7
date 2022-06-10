@@ -8,6 +8,7 @@ const hbs = exphbs.create({helpers});
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
+var morgan = require('morgan')
 
 //cookie timeout is 1 hour
 const sess = {
@@ -27,6 +28,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(morgan('tiny'))
 app.use(session(sess));
 
 //handlebar
