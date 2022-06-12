@@ -103,9 +103,10 @@ This application requires installation of following packages to run successfully
 
 ## Screenshots of application page
 
-![image](./assets/img/image%20(1).png)
-![image](./assets/img/image%20(2).png)
-![image](./assets/img/image.png)
+![image](./assets/image.png)
+![image](./assets/image%20(1).png)
+![image](./assets/image%20(2).png)
+
 
 ## License
   
