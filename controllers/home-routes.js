@@ -98,8 +98,11 @@ router.get('/post/:id', (req, res) => {
 
 
 router.get('/about', (req, res) => {
-    res.render('aboutus')
+    res.render('aboutus', {
+        loggedIn: req.session.loggedIn,
+        username: req.session.username
+    });
 });
 
-module.exports = router;
+
 module.exports = router;
