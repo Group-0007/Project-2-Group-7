@@ -42,7 +42,13 @@
         <div class="d-flex h-100">
           <div class="project-text w-100 my-auto text-center text-lg-left">
              <a href="{{post.post_url}}" target="_blank"></a><h4 class="text-white">{{post.title}}</h4></a>
+             <span>({{post.post_url}})</span>
             <p class="mb-0 text-white-50">{{post.content}}</p>
+            <div class="meta text-white">
+            {{post.vote_count}} by {{post.user.username}}
+            {{post.created_at}}
+            <a href="/post/{{post.id}}" class="test-white">{{post.comments.length}} comment(s)</a>
+            </div>
             <hr class="d-none d-lg-block mb-0 ms-0" />
           </div>
         </div>

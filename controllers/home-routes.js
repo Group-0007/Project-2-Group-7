@@ -96,4 +96,10 @@ router.get('/post/:id', (req, res) => {
         });
 });
 
+
+router.get('/about', (req, res) => {
+    res.render('aboutus')
+});
+
+module.exports = router;
 module.exports = router;

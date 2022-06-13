@@ -1,19 +1,25 @@
-<br><br><br>
-<article>
-    <h2>Edit post</h2>
-    <form class="edit-post-form">
-        <div>
-            <input name="post-title" type="text" value="{{post.title}}" /><br>
-            <input name="post-content" type="text" rows="15" cols="100" value="{{post.content}}" /><br>
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <section>
+                <h2 class="text-white">Edit post:</h2>
+                <form class="edit-post-form">
+                    <div>
+                        <input name="post-title" type="text" value="{{post.title}}" /><br>
+                        <input name="post-content" type="text" rows="15" cols="100" value="{{post.content}}" /><br>
+                    </div>
+                    <div>
+                        <p class="soft-text text-white">This was posted by you on {{format_date post.created_at}}</p>
+                    </div>
+                    <button type="submit">Update post</button>
+                    <button type="button" class="delete-post-btn">Delete post</button>
+                </form>
+                </section>
+            </div>
         </div>
-        <div>
-            <p class="soft-text">This was posted by you on {{format_date post.created_at}}</p>
-        </div>
-        <button type="submit">update post</button>
-        <button type="button" class="delete-post-btn">delete post</button>
-    </form>
-</article>
-
+    </div>
+</header>
 {{> comments post.comments}}
 
 <script src="/javascript/edit-post.js"></script>

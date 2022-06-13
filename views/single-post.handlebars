@@ -1,19 +1,26 @@
-{{> post-info post}}
-
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add a comment!</button>
-  </div>
-</form>
-{{/if}}
-
-{{> comments post.comments}}
-
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center text-white">
+              {{> post-info post}}
+              
+              {{#if loggedIn}}
+              <form class="comment-form">
+                <div>
+                  <textarea name="comment-body"></textarea>
+                </div>
+              
+                <div>
+                  <button type="submit">add a comment!</button>
+                </div>
+              </form>
+              {{/if}}
+              
+              {{> comments post.comments}}
+            </div>
+        </div>
+    </div>
+</header>              
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
